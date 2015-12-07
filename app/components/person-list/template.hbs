@@ -1,0 +1,7 @@
+{{#each people as |person|}}
+  <li class="person {{if (eq person favoritePerson) 'favorite'}}" {{action 'setAsFavorite' person}}>
+    {{yield person}}
+  </li>
+{{else}}
+  {{yield to="inverse"}}
+{{/each}}

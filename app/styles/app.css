@@ -1,0 +1,32 @@
+ul {
+  list-style: none;
+}
+
+/* Makes the element clickable */
+li {
+  cursor: pointer;
+}
+
+.favorite {
+  color: red;
+}
+
+.clock {
+  width: 20px;
+}
+
+#sidebar {
+  width: 250px;
+  background: #eee;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main {
+  margin-left: 270px;
+  width: calc(100% - 270px);
+}

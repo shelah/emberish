@@ -1,0 +1,32 @@
+<div id="sidebar">
+  {{#person-list 
+    people=model.people 
+    favoritePerson=model.favoritePerson
+    onFavorite=(action 'personFavorited') as |person|}}
+    
+    <img src={{person.avatar_url}} height=50> {{person.login}}
+    
+  {{else}}  
+    I have no people at all.
+  {{/person-list}}
+</div>
+
+<div id="main">
+  {{model.greeting.word}} {{make-loud model.favoritePerson.login format='bold'}}
+
+  {{#link-to 'change-greeting'}}Change greeting{{/link-to}}
+
+  <p>
+    <div>Total records: {{totalRecords}}</div>
+    <div>Total pages: {{totalPages}}</div>
+    <div>Is Last Page: {{isLastPage}}</div>
+  </p>
+
+  <button href="#" disabled={{isFirstPage}} {{action 'previousPage'}}>Previous</button>
+  -
+  <button href="#" disabled={{isLastPage}} {{action 'nextPage'}}>Next</button>
+
+  <div>
+    {{outlet}}
+  </div>
+</div>
