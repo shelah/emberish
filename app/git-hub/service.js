@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
-export const clientId = 'a8ff05b37508a46c5e33';
-export const clientSecret = '83c5a86aafea65296801692cd6c62b9020361946';
+export const clientId = 'myclientid';
+export const clientSecret = 'myclientsecret';
 
 const {
   service
